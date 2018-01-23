@@ -111,7 +111,7 @@ public class ${name}Request extends MobileMessage implements Serializable{
 	
 	@Override
 	public String getRequestUrl() {
-		return "/${project}/app/${name?uncap_first}";
+		return "/app/${name?uncap_first}";
 	}
 	
 

@@ -72,7 +72,7 @@
 }
 
 +(NSString*)RA_type {
-    return @"/${project}/app/${id}";
+    return @"/app/${id}";
 }
 
 -(id)init {
