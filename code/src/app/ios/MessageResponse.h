@@ -12,7 +12,4 @@
 + (id)responseWithReponseData:(NSData*)responseData;
 - (id)initWithReponseData:(NSData*)responseData;
 
-//验签解密
--(id)validateSignAndDecWithPkey:(NSString*)pkey mkey:(NSString*)mkey;
-
 @end

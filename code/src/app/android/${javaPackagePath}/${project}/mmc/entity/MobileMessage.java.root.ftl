@@ -1,5 +1,6 @@
 package com.zhijiansihang.finger.mmc.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -41,13 +42,8 @@ public class MobileMessage {
     //挡板服务赋值test，实现的服务不要赋值
     private String mode;
 
-    //美美理财版本（1），种子计划版本（2），美美金融版本（3）
     private String operationChannel;
-    /**
-     *  app包名称
-     *  主包： 空  或者  美美理财：100  种子计划：200  美美金融：300
-     * 	副包：  美美理财：101~199  种子计划：201~299  美美金融：301~399
-     */
+
     private String packageName;
 
     public String getMsgeps() {
@@ -237,8 +233,15 @@ public class MobileMessage {
     public void setPackageName(String packageName) {
         this.packageName = packageName;
     }
+    
+    @JsonIgnore
+    public Class getResponseClass() {
+        return null;
+    }
 
-
-
+    @JsonIgnore
+    public String getRequestUrl() {
+        return null;
+    }
 
 }
